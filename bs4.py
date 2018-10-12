@@ -38,3 +38,6 @@ link_node = soup.find('a',href=re.compile(r"ill"))
 print('获取p段落文字')
 p_node = soup.find('p',class_='title')
 print(p_node.name,p_node.get_text())
+
+
+print(soup.prettify())            # 格式化soup文件
