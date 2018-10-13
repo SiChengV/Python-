@@ -29,14 +29,14 @@ for link in links:
 
 
 print('获取lacie的链接')
-link_node = soup.find('a',href='http://example.com/lacie')
+link_node = soup.find('a',href='http://example.com/lacie')                # find返回值可在次find 而find_all不行
 print(link_node.name,link_node['href'],link_node.get_text())
 
 print('正则表达式匹配')
 link_node = soup.find('a',href=re.compile(r"ill"))
 
 print('获取p段落文字')
-p_node = soup.find('p',class_='title')
+p_node = soup.find('p',class_='title')                      # 等价 soup.find('p', attrs={'class':'title'})
 print(p_node.name,p_node.get_text())
 
 
